@@ -7,12 +7,8 @@ const apiClient = axios.create({
 
 apiClient.interceptors.request.use((config) => {
     const token = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
-    if (!config.headers) {
-        config.headers = {};
-    }
-
-    if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
+       if (token) {
+        (config.headers as Record<string, string>)["Authorization"] = `Bearer ${token}`;
     }
 
     return config;
