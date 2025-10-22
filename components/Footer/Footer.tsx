@@ -8,7 +8,7 @@ const Footer = () => {
                     © {new Date().getFullYear()} NoteHub. All rights reserved.
                 </p>
                 <div className={css.wrap}>
-                    <p>Developer: Stanislav Nemch</p>
+                    <p>Developer: Lina Khatsko</p>
                     <p>
                         Contact us:{" "}
                         <a href="mailto:student@notehub.app">
